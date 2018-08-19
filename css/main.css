@@ -1,0 +1,62 @@
+#bubble-chart text {
+    text-anchor: middle;
+     text-shadow:
+    -1px -1px 0 rgba(0,0,0,0.15),
+    1px -1px 0 rgba(0,0,0,0.15),
+    -1px 1px 0 rgba(0,0,0,0.15),
+    1px 1px 0 rgba(0,0,0,0.15);
+}
+
+#bubble-chart {
+    text-align: center;
+    height: 1000px;
+}
+
+#bubble-chart svg {
+    width: 75%;
+    height: 1000px;
+    text-align: center;
+}
+
+#bubble-chart circle {
+    padding: 10px;
+    /*height: 1000px;*/
+    /*text-align: center;*/
+}
+
+circle {
+    stroke: rgba(0, 0, 0, 0.15);
+    fill-opacity: 0.85;
+}
+
+.bubble-chart-container {
+    position: relative;
+    display: table;
+    height: auto;
+    background-size: cover;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    width: 95%;
+}
+
+.axis line {
+    fill: none;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+}
+
+.axis path {
+    fill: none;
+}
+
+.axis text {
+    font-size: 0.7em;
+    fill: #555;
+    font-family: sans-serif
+}
+
+#bubble-chart text {
+    font-size: 1.5em;
+}

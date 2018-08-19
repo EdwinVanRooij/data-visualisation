@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="World News - Data Visualization">
+    <meta name="author" content="Edwin van Rooij">
+
+    <title>Reddit Worldnews</title>
+
+    <!--My shit-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <link rel="stylesheet" href="d3.slider.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+<script src="d3.slider.js"></script>
+
+<!-- Header -->
+<header class="masthead d-flex">
+    <div class="container text-center my-auto">
+        <h1 class="mb-1">Reddit Worldnews</h1>
+        <h3 class="mb-5">
+            <em>A data visualization for the subreddit /r/worldnews</em>
+        </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Go To Visualization</a>
+    </div>
+    <div class="overlay"></div>
+</header>
+
+<!-- About -->
+<section class="content-section bg-light" id="about">
+
+    <div class="container text-center">
+        <div class="col-lg-10 mx-auto">
+
+            <!--&gt; ### China has been a major point of discussion in the western internet community between 2008 and 2016. (beyond the knowledge of the average Dutch citizen)-->
+            <h2>China has been a major point of discussion for 9 years!</h2>
+            <p class="lead mb-5">It's been ranking high among the most popular words on the internet forum Reddit -
+                which is mainly used by western visitors - from 2008 up until 2016.</p>
+
+            <a class="lead mb-5 btn btn-primary btn-xl js-scroll-trigger" onclick="playAnimation()"
+               href="#animation-location">Play Animation</a>
+        </div>
+
+    </div>
+
+    <div class="container text-center" id="animation-location">
+        <div class="col-lg-10 mx-auto">
+            <br/>
+            <div class="year">
+                <h1>Text</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="bubble-chart-container">
+        <!--<div class="row">-->
+
+        <section>
+            <div id="bubble-chart">
+                <svg class="bubble">
+
+                </svg>
+            </div>
+            <div id="slider"></div>
+        </section>
+        <!--</div>-->
+    </div>
+
+    <div class="container text-center">
+        <div class="col-lg-10 mx-auto">
+            <p class="lead mb-5">Use the slider above to view results per year.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Services -->
+<section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container">
+        <div class="content-section-heading">
+            <h2 class="mb-5">Top Stories</h2>
+        </div>
+
+
+        <div class="container text-center">
+            <div class="col-lg-10 mx-auto">
+
+                <h2>"West Acts Like Bull in <u><b>China</b></u> Shop in Middle East – Russian PM Our Western partners
+                    sometimes behave<b>...</b>"</h2>
+                <p class="lead mb-5">- by <b>Libertatea</b>, 2013-08-04 (<b>2338</b> upvotes)</p>
+            </div>
+
+            <div class="col-lg-10 mx-auto">
+
+                <h2>"Chinese police detain person, who posted a video of violent protests in <u><b>china</b></u>, for
+                    spreading rumors of labor unrest"</h2>
+                <p class="lead mb-5">- by <b>itoitoito</b>, 2016-10-23 (<b>2015</b> upvotes)</p>
+            </div>
+
+            <div class="col-lg-10 mx-auto">
+
+                <h2>"<u><b>China</b></u> sends first 700 strong infantry battalion to South Sudan for UN peacekeeping<b>...</b>"
+                </h2>
+                <p class="lead mb-5">- by <b>PanAfrica</b>, 2014-12-22 (<b>329</b> upvotes)</p>
+            </div>
+
+            <div class="col-lg-10 mx-auto">
+
+                <h2>"Chinese police flight to congo to rescue 11 chinese women trafficked <b>...</b> and earn there,
+                    then in china."</h2>
+                <p class="lead mb-5">- by <b>vipez</b>, 2011-01-02 (<b>162</b> upvotes)</p>
+            </div>
+            <div class="col-lg-10 mx-auto">
+
+                <h2>"6.3 Earthquake just hit <u><b>china</b></u>"</h2>
+                <p class="lead mb-5">- by <b>Kody217</b>, 2012-06-30 (<b>117</b> upvotes)</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <ul class="list-inline mb-5">
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white" href="https://github.com/EdwinVanRooij/">
+                    <i class="icon-social-github"></i>
+                </a>
+            </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; Edwin van Rooij</p>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/stylish-portfolio.min.js"></script>
+
+<!--My shit again-->
+<script src="js/charts.js"></script>
+
+</body>
+
+</html>
